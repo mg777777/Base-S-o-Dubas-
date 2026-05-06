@@ -83,6 +83,7 @@ nav a:hover {
 }
 
 .hero-content {
+    margin-top: 80px;
     max-width: 760px;
 }
 
@@ -404,21 +405,64 @@ footer a {
     z-index: 9999;
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
-
-/* RESPONSIVO */
 @media (max-width: 850px) {
+
     header {
-        flex-direction: column;
-        gap: 12px;
+        position: relative;
+        padding: 10px 4%;
+        display: block;
+        text-align: center;
+    }
+
+    .logo {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        height: 55px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
     }
 
     nav a {
-        margin: 0 8px;
-        font-size: 14px;
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 35px 7% 70px;
     }
 
     .hero h1 {
-        font-size: 38px;
+        font-size: 36px;
+        line-height: 1.1;
+    }
+
+    .hero p {
+        font-size: 20px;
+        line-height: 1.45;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .whats-fixo {
+        bottom: 80px;
+        right: 15px;
+        padding: 13px 18px;
     }
 
     .sobre-grid,
@@ -434,6 +478,8 @@ footer a {
     .galeria-grid img {
         height: 230px;
     }
+
+
 }
 .btn-instagram {
     background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
