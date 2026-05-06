@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>São Dubas | Burgers & Shakes em Santos</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;;
+    background: #120706;
+    color: #fff;
+}
+
+/* CORES */
+:root {
+--marrom: #3b170d;
+--marrom-escuro: #0d0504;
+--dourado: #ffb01f;
+--creme: #ffe7b0;
+--verde: #25D366;
+
+/* TOPO */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(18, 7, 6, 0.95);
+    z-index: 999;
+    padding: 14px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--dourado);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 58px;
+}
+
+.logo span {
+    color: var(--dourado);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 22px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--dourado);
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+    background:
+        linear-gradient(rgba(18,7,6,0.75), rgba(18,7,6,0.95)),
+        url("fachada.png") center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.hero img {
+    width: 260px;
+    max-width: 90%;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.05;
+    color: var(--dourado);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 21px;
+    line-height: 1.6;
+    color: var(--creme);
+    margin-bottom: 28px;
+}
+
+.botoes {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.btn-whats {
+    background: var(--verde);
+    color: #fff;
+}
+
+.btn-instagram {
+    background: transparent;
+    color: var(--dourado);
+    border: 2px solid var(--dourado);
+}
+.btn-ifood{
+    background:#ea1d2c;
+    color:#fff;
+    border:2px solid #ea1d2c;
+}
+
+.btn-ifood:hover{
+    background:transparent;
+    color:#ea1d2c;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* SEÇÕES */
+section {
+    padding: 80px 7%;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo h2 {
+    font-size: 42px;
+    color: var(--dourado);
+    text-transform: uppercase;
+}
+
+.titulo p {
+    color: var(--creme);
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* SOBRE */
+.sobre {
+    background: #1b0b08;
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.sobre-texto p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: var(--creme);
+    margin-bottom: 18px;
+}
+
+.destaques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: #2a110c;
+    border: 1px solid rgba(252, 175, 23, 0.35);
+    padding: 22px;
+    border-radius: 18px;
+}
+
+.card h3 {
+    color: var(--dourado);
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: var(--creme);
+    line-height: 1.5;
+}
+
+/* VIDEO */
+.video-area {
+    background: #120706;
+}
+
+.video-box {
+    max-width: 850px;
+    margin: auto;
+    background: #2a110c;
+    border-radius: 25px;
+    padding: 25px;
+    border: 1px solid rgba(252, 175, 23, 0.35);
+}
+
+.video-box video {
+    width: 100%;
+    border-radius: 18px;
+}
+
+/* PEDIDO */
+.pedido {
+    background:
+        linear-gradient(rgba(92,47,25,0.94), rgba(18,7,6,0.96)),
+        url("burger1.png") center/cover no-repeat;
+}
+
+.form-pedido {
+    max-width: 720px;
+    margin: auto;
+    background: #fff;
+    color: #333;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+}
+
+.form-pedido label {
+    font-weight: bold;
+    color: var(--marrom);
+    display: block;
+    margin-bottom: 7px;
+}
+
+.form-pedido select,
+.form-pedido input,
+.form-pedido textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+}
+
+.form-pedido select:focus,
+.form-pedido input:focus,
+.form-pedido textarea:focus {
+    border-color: var(--dourado);
+    outline: none;
+}
+
+.form-pedido button {
+    width: 100%;
+    padding: 17px;
+    background: var(--verde);
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-pedido button:hover {
+    transform: scale(1.03);
+}
+
+/* GALERIA */
+.galeria {
+    background: #1b0b08;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 2px solid rgba(252,175,23,0.25);
+}
+
+/* HORARIOS */
+.horarios {
+    background: #120706;
+    text-align: center;
+}
+
+.horario-box {
+    display: inline-block;
+    background: #2a110c;
+    padding: 35px 55px;
+    border-radius: 22px;
+    border: 1px solid rgba(252,175,23,0.35);
+}
+
+.horario-box p {
+    font-size: 22px;
+    margin: 12px 0;
+    color: var(--creme);
+}
+
+.horario-box strong {
+    color: var(--dourado);
+}
+
+/* LOCAL */
+.local {
+    background: #1b0b08;
+}
+
+.local-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: center;
+}
+
+.local-info {
+    background: #2a110c;
+    padding: 35px;
+    border-radius: 22px;
+}
+
+.local-info h3 {
+    color: var(--dourado);
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.local-info p {
+    color: var(--creme);
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.local iframe {
+    width: 100%;
+    height: 360px;
+    border: 0;
+    border-radius: 22px;
+}
+
+/* RODAPÉ */
+footer {
+    background: #0b0302;
+    padding: 35px 7%;
+    text-align: center;
+    border-top: 2px solid var(--dourado);
+}
+
+footer p {
+    color: var(--creme);
+    margin-bottom: 12px;
+}
+
+footer a {
+    color: var(--dourado);
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+/* BOTÃO FLUTUANTE */
+.whats-fixo {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    background: var(--verde);
+    color: #fff;
+    padding: 16px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 9999;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* RESPONSIVO */
+@media (max-width: 850px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .sobre-grid,
+    .local-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destaques,
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-grid img {
+        height: 230px;
+    }
+}
+.btn-instagram {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-instagram:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+       <img src="logo.png">
+        <span>São Dubas</span>
+    </div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#pedido">Pedido</a>
+        <a href="#local">Localização</a>
+        <a href="https://www.instagram.com/sao.dubas/" target="_blank">Instagram</a>
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+    <div class="hero-content">
+
+
+        <h1>Burgers artesanais, shakes e aquele sabor que marca.</h1>
+
+        <p>
+            A São Dubas é o ponto certo em Santos para quem busca hambúrguer artesanal,
+            milkshake caprichado, porções e um ambiente perfeito para reunir família e amigos.
+        </p>
+
+        <div class="botoes">
+            <a class="btn btn-whats" href="https://wa.me/5513981968816?text=Olá!%20Vim%20pelo%20site%20da%20São%20Dubas%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank">
+                Pedir pelo WhatsApp
+            </a>
+
+            <a class="btn btn-instagram" href="https://www.instagram.com/sao.dubas/" target="_blank">
+                Ver Instagram
+				<a class="btn btn-ifood"
+href="https://www.ifood.com.br/delivery/santos-sp/sao-dubas---hamburgueria-artesanal-marape/01ec1490-d561-4baf-9a24-b90d98afe175?utm_medium=share"
+target="_blank">
+
+Peça pelo iFood
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="sobre" id="sobre">
+    <div class="titulo">
+        <h2>Sobre a São Dubas</h2>
+        <p>Tradição, sabor e experiência em cada pedido.</p>
+    </div>
+
+    <div class="sobre-grid">
+        <div class="sobre-texto">
+            <p>
+                O São Dubas é uma hamburgueria artesanal localizada no Marapé, em Santos,
+                criada para quem valoriza comida bem feita, ambiente acolhedor e aquele atendimento
+                direto que facilita a vida do cliente.
+            </p>
+
+            <p>
+                Conhecida pelos hambúrgueres suculentos, maionese especial, milkshakes e porções
+                caprichadas, a casa reúne o melhor dos burgers artesanais com uma proposta familiar,
+                descontraída e cheia de personalidade.
+            </p>
+
+            <p>
+                Com mais de 10 anos de experiência, a São Dubas entrega sanduíches generosos,
+                Onion Rings, batatas, combos e opções para diferentes momentos. Para consultar
+                opções atualizadas ou fazer seu pedido, é só chamar direto no WhatsApp.
+            </p>
+        </div>
+
+        <div class="destaques">
+            <div class="card">
+                <h3>🍔 Burgers artesanais</h3>
+                <p>Sanduíches generosos, saborosos e feitos com identidade própria.</p>
+            </div>
+
+            <div class="card">
+                <h3>🥤 Shakes</h3>
+                <p>Milkshakes cremosos para fechar a experiência com chave de ouro.</p>
+            </div>
+
+            <div class="card">
+                <h3>🍟 Porções</h3>
+                <p>Batatas, Onion Rings e acompanhamentos para dividir com a galera.</p>
+            </div>
+
+            <div class="card">
+                <h3>📲 Pedido direto</h3>
+                <p>Fale pelo WhatsApp e consulte as opções atualizadas do dia.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="video-area" id="video">
+    <div class="titulo">
+        <h2>Conheça a experiência</h2>
+        <p>Um pouco do estilo São Dubas.</p>
+    </div>
+
+    <div class="video-box">
+        <video controls>
+            <source src="dubas.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+    </div>
+</section>
+
+<section class="pedido" id="pedido">
+    <div class="titulo">
+        <h2>Escolha seu pedido</h2>
+        <p>Monte sua mensagem e envie direto no WhatsApp.</p>
+    </div>
+
+    <div class="form-pedido">
+      <div style="text-align:center; margin-top:30px;">
+
+    <a class="btn btn-whats"
+    href="https://wa.me/5513981968816?text=Olá!%20Vim%20pelo%20site%20da%20São%20Dubas%20e%20gostaria%20de%20ver%20as%20opções%20de%20lanches,%20combos%20e%20bebidas."
+    target="_ blank"
+    style="font-size:22px; padding:18px 35px;">
+
+        💬 Ver opções e pedir no WhatsApp
+
+    </a>
+
+</div>
+    </div>
+</section>
+
+<section class="galeria">
+    <div class="titulo">
+        <h2>Galeria</h2>
+        <p>Alguns registros da experiência São Dubas.</p>
+    </div>
+
+    <div class="galeria-grid">
+        <img src="burger1.png" alt="Burger São Dubas">
+        <img src="burger2.png" alt="Hambúrguer artesanal">
+        <img src="shake.png" alt="Milkshake São Dubas">
+        <img src="dog.png" alt="Fachada São Dubas">
+    </div>
+</section>
+
+<section class="horarios">
+    <div class="titulo">
+        <h2>Horários</h2>
+        <p>Confira nossos horários de atendimento.</p>
+    </div>
+
+    <div class="horario-box">
+        <p><strong>Segunda a quinta:</strong> 18h às 22h15</p>
+        <p><strong>Sexta e sábado:</strong> 18h às 23h15</p>
+    </div>
+</section>
+
+<section class="local" id="local">
+    <div class="titulo">
+        <h2>Localização</h2>
+        <p>Estamos no Marapé, em Santos.</p>
+    </div>
+
+    <div class="local-grid">
+        <div class="local-info">
+            <h3>São Dubas | Burgers & Shakes</h3>
+
+            <p>
+                R. Dom Duarte Leopoldo e Silva, 40<br>
+                Marapé, Santos - SP<br>
+                CEP: 11070-130
+            </p>
+
+            <a class="btn btn-whats" href="https://www.google.com/maps/search/?api=1&query=São+Dubas+Burgers+%26+Shakes+R.+Dom+Duarte+Leopoldo+e+Silva+40+Santos+SP" target="_blank">
+                Ver rota no mapa
+            </a>
+        </div>
+
+        <iframe 
+          <img src="dubas.png" class="foto-local">
+        </iframe>
+    </div>
+</section>
+
+<footer>
+    <p>São Dubas | Burgers & Shakes em Santos - Marapé</p>
+
+    <p>
+        <a href="https://wa.me/5513981968816" target="_blank">WhatsApp</a> |
+        <a href="https://www.instagram.com/sao.dubas/" target="_blank">Instagram</a> |
+        <a href="https://www.facebook.com/saodubas" target="_blank">Facebook</a> |
+        <a href="https://pedido.takeat.app/saodubas" target="_blank">Pedido Online</a>
+    </p>
+</footer>
+
+<a class="whats-fixo" href="https://wa.me/5513981968816?text=Olá!%20Vim%20pelo%20site%20da%20São%20Dubas." target="_blank">
+    WhatsApp
+</a>
+
+<script>
+function enviarWhatsApp() {
+    var categoria = document.getElementById("categoria").value;
+    var item = document.getElementById("item").value;
+    var quantidade = document.getElementById("quantidade").value;
+    var observacao = document.getElementById("observacao").value;
+
+    if (categoria === "") {
+        alert("Escolha uma categoria.");
+        return;
+    }
+
+    if (item === "") {
+        alert("Digite o item desejado.");
+        return;
+    }
+
+    if (quantidade === "") {
+        alert("Digite a quantidade.");
+        return;
+    }
+
+    var mensagem = "Olá! Vim pelo site da São Dubas e gostaria de fazer um pedido:%0A%0A";
+    mensagem += "Categoria: " + categoria + "%0A";
+    mensagem += "Item: " + item + "%0A";
+    mensagem += "Quantidade: " + quantidade + "%0A";
+
+    if (observacao !== "") {
+        mensagem += "Observação: " + observacao + "%0A";
+    }
+
+    var numero = "5513981968816";
+    var link = "https://wa.me/" + numero + "?text=" + mensagem;
+
+    window.open(link, "_blank");
+}
+</script>
+
+</body>
+</html>
