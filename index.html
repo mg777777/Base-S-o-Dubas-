@@ -1,0 +1,883 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="facebook-domain-verification" content="78ejtiiib8rscbkfp8nwg01hc2q0n0" />
+
+<title>São Dubas - Burger & Shake</title>
+
+<meta name="description" content="São Dubas Burger & Shake em Santos.">
+<meta name="keywords" content="sao dubas, burger, shake">
+
+<link rel="shortcut icon" href="img/favicon.png">
+<link href="fonts/stylesheet.css" rel="stylesheet" type="text/css">
+
+<style>
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+html,
+body{
+	width:100%;
+	min-height:100%;
+	background:#fff3d6;
+	font-family:Verdana, Geneva, sans-serif;
+	scroll-behavior:smooth;
+	overflow-x:hidden;
+	color:#4d2814;
+}
+
+a{
+	text-decoration:none;
+}
+
+.topo{
+	width:100%;
+	height:155px;
+
+	background:
+	linear-gradient(
+		90deg,
+		#fff8e8,
+		#f4d28b,
+		#fff1cf
+	);
+
+	position:relative;
+
+	border-bottom:5px solid #e4a326;
+
+	box-shadow:
+	0 6px 22px rgba(0,0,0,.12);
+}
+
+.telefone-topo{
+	position:absolute;
+	top:18px;
+	right:45px;
+
+	color:#5c2f19;
+
+	font-size:30px;
+	font-weight:bold;
+
+	font-family:"FestivoLC-Basic",Verdana, Geneva, sans-serif;
+
+	text-shadow:
+	1px 1px 0 rgba(255,255,255,.6);
+}
+
+.topo .borda{
+	position:absolute;
+	bottom:-17px;
+	width:100%;
+	height:17px;
+	background:url(img/rodape.png) repeat-x;
+	z-index:5;
+}
+
+.menu{
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:10px;
+
+	text-align:center;
+}
+
+.menu li{
+	list-style:none;
+	display:inline-block;
+
+	font-family:"festivo_lcmini", Verdana, Geneva, sans-serif;
+
+	font-size:27px;
+	text-transform:uppercase;
+
+	padding-right:24px;
+
+	vertical-align:middle;
+}
+
+.menu li a{
+	display:block;
+
+	padding:18px;
+
+	color:#5c2f19;
+
+	font-weight:bold;
+
+	transition:.3s;
+}
+
+.menu li a:hover{
+	color:#d88a16;
+	transform:translateY(-3px);
+}
+
+.menu li.logo a{
+	padding:0 18px;
+}
+
+.menu li.logo img{
+	width:210px;
+	margin-bottom:-12px;
+
+	filter:
+	drop-shadow(0 6px 12px rgba(0,0,0,.18));
+}
+
+.banner{
+	width:100%;
+	height:88vh;
+
+	position:relative;
+	overflow:hidden;
+}
+
+.banner-slide{
+	position:absolute;
+	inset:0;
+
+	background-size:cover;
+	background-position:center;
+
+	opacity:0;
+
+	animation:slideShow 30s infinite;
+}
+
+.slide1{
+	background-image:url(img/foto1.jpg);
+	animation-delay:0s;
+}
+
+.slide2{
+	background-image:url(img/foto2.jpg);
+	animation-delay:5s;
+}
+
+.slide3{
+	background-image:url(img/foto3.jpg);
+	animation-delay:10s;
+}
+
+.slide4{
+	background-image:url(img/foto4.jpg);
+	animation-delay:15s;
+}
+
+.slide5{
+	background-image:url(img/foto5.jpg);
+	animation-delay:20s;
+}
+
+.slide6{
+	background-image:url(img/foto6.jpg);
+	animation-delay:25s;
+}
+
+@keyframes slideShow{
+
+	0%{
+		opacity:0;
+		transform:scale(1);
+	}
+
+	5%{
+		opacity:1;
+	}
+
+	17%{
+		opacity:1;
+	}
+
+	23%{
+		opacity:0;
+		transform:scale(1.05);
+	}
+
+	100%{
+		opacity:0;
+	}
+}
+
+.banner-overlay{
+	position:absolute;
+	inset:0;
+
+	background:
+	linear-gradient(
+		rgba(48,20,8,.48),
+		rgba(48,20,8,.68)
+	);
+
+	z-index:1;
+}
+
+.banner-conteudo{
+	position:absolute;
+	top:50%;
+	left:50%;
+
+	transform:translate(-50%,-50%);
+
+	text-align:center;
+
+	width:90%;
+	max-width:950px;
+
+	z-index:2;
+}
+
+.banner-conteudo h1{
+	font-family:"FestivoLC-Basic",Verdana, Geneva, sans-serif;
+
+	font-size:108px;
+	line-height:98px;
+
+	color:#fff8ec;
+
+	text-transform:uppercase;
+
+	text-shadow:
+	5px 5px 0 #6e3b18,
+	0 0 30px rgba(0,0,0,.45);
+}
+
+.banner-conteudo p{
+	color:#fff5df;
+
+	font-size:30px;
+
+	margin-top:22px;
+
+	font-weight:bold;
+
+	text-shadow:
+	0 4px 14px rgba(0,0,0,.45);
+}
+
+.botao-principal{
+	display:inline-block;
+
+	margin-top:38px;
+
+	background:
+	linear-gradient(
+		135deg,
+		#ffce58,
+		#e49a1d
+	);
+
+	color:#5a2d12;
+
+	font-family:"FestivoLC-Basic",Verdana, Geneva, sans-serif;
+
+	font-size:36px;
+
+	padding:22px 65px;
+
+	border-radius:65px;
+
+	text-transform:uppercase;
+
+	box-shadow:
+	0 12px 30px rgba(0,0,0,.35),
+	inset 0 2px 0 rgba(255,255,255,.35);
+
+	border:3px solid rgba(255,255,255,.55);
+
+	transition:.3s;
+}
+
+.botao-principal:hover{
+	transform:scale(1.06);
+	filter:brightness(1.05);
+}
+
+#simbolo{
+	width:100%;
+
+	padding:85px 20px;
+
+	background:
+	linear-gradient(
+		135deg,
+		#fff4d9,
+		#f2d89a,
+		#f8e8bd
+	);
+
+	text-align:center;
+}
+
+.logo-movendo{
+	width:330px;
+	max-width:90%;
+
+	animation:flutuar 3s ease-in-out infinite;
+
+	filter:
+	drop-shadow(0 12px 25px rgba(0,0,0,.22));
+}
+
+@keyframes flutuar{
+
+	0%{
+		transform:translateY(0px);
+	}
+
+	50%{
+		transform:translateY(-12px);
+	}
+
+	100%{
+		transform:translateY(0px);
+	}
+}
+
+#video{
+	width:100%;
+
+	padding:95px 20px;
+
+	background:
+	linear-gradient(
+		135deg,
+		#fff4d9,
+		#f0d7a1,
+		#e5b45f
+	);
+
+	text-align:center;
+}
+
+.video-box{
+	width:920px;
+	max-width:95%;
+
+	margin:auto;
+
+	background:
+	rgba(255,248,230,.58);
+
+	padding:48px;
+
+	border-radius:35px;
+
+	border:4px solid #d88a16;
+
+	box-shadow:
+	0 16px 40px rgba(0,0,0,.18);
+}
+
+.video-box h2{
+	font-family:"FestivoLC-Basic",Verdana, Geneva, sans-serif;
+
+	font-size:78px;
+
+	color:#6a3818;
+
+	text-transform:uppercase;
+
+	margin-bottom:30px;
+
+	text-shadow:
+	2px 2px 0 rgba(255,255,255,.45);
+}
+
+.video-box video{
+	width:100%;
+	max-height:520px;
+
+	border-radius:22px;
+
+	border:4px solid #d88a16;
+
+	background:#000;
+
+	box-shadow:
+	0 12px 30px rgba(0,0,0,.25);
+}
+
+#contato{
+	background:
+	linear-gradient(
+		rgba(255,201,84,.92),
+		rgba(232,163,48,.92)
+	),
+	url(img/pattern.png);
+
+	background-size:cover;
+	background-position:center;
+
+	padding:95px 20px;
+
+	text-align:center;
+}
+
+#contato h2{
+	font-family:"FestivoLC-Basic",Verdana, Geneva, sans-serif;
+
+	font-size:92px;
+
+	color:#5d2f13;
+
+	text-transform:uppercase;
+
+	margin-bottom:25px;
+
+	text-shadow:
+	2px 2px 0 rgba(255,255,255,.35);
+}
+
+#contato p{
+	color:#5d2f13;
+
+	font-size:30px;
+
+	font-weight:bold;
+
+	line-height:46px;
+}
+
+.contato-botoes{
+	margin-top:40px;
+}
+
+.contato-botoes a{
+	display:inline-block;
+
+	margin:10px;
+
+	padding:18px 34px;
+
+	border-radius:45px;
+
+	color:#ffffff;
+
+	font-family:"FestivoLC-Basic",Verdana, Geneva, sans-serif;
+
+	font-size:22px;
+
+	text-transform:uppercase;
+
+	box-shadow:
+	0 8px 20px rgba(0,0,0,.18);
+
+	transition:.3s;
+}
+
+.contato-botoes a:hover{
+	transform:translateY(-4px);
+}
+
+.botao-whatsapp{
+	background:#25d366;
+}
+
+.botao-instagram{
+	background:
+	linear-gradient(
+		135deg,
+		#833ab4,
+		#fd1d1d,
+		#fcb045
+	);
+}
+
+.botao-ifood{
+	background:#ea1d2c;
+}
+
+.botao-cardapio{
+	background:#6b3b1c;
+	color:#ffffff !important;
+}
+
+.mapa-box{
+	width:100%;
+
+	background:
+	linear-gradient(
+		180deg,
+		#fff0c7,
+		#efc979
+	);
+
+	padding:85px 20px;
+
+	text-align:center;
+}
+
+.mapa-titulo{
+	font-family:"FestivoLC-Basic",Verdana, Geneva, sans-serif;
+
+	font-size:82px;
+
+	color:#6b3b1c;
+
+	text-transform:uppercase;
+
+	margin-bottom:18px;
+
+	text-shadow:
+	2px 2px 0 rgba(255,255,255,.45);
+}
+
+.mapa-texto{
+	color:#5d2f13;
+
+	font-size:28px;
+
+	font-weight:bold;
+
+	line-height:42px;
+
+	margin-bottom:35px;
+}
+
+.botao-maps{
+	display:inline-block;
+
+	background:
+	linear-gradient(
+		135deg,
+		#ffca54,
+		#e39a1c
+	);
+
+	color:#5a2d12;
+
+	padding:20px 45px;
+
+	border-radius:60px;
+
+	font-family:"FestivoLC-Basic",Verdana, Geneva, sans-serif;
+
+	font-size:28px;
+
+	text-transform:uppercase;
+
+	box-shadow:
+	0 10px 25px rgba(0,0,0,.18);
+
+	margin-bottom:42px;
+
+	transition:.3s;
+}
+
+.botao-maps:hover{
+	transform:scale(1.05);
+}
+
+.mapa{
+	display:block;
+
+	width:100%;
+	max-width:1120px;
+
+	height:470px;
+
+	margin:0 auto;
+
+	border:none;
+
+	border-radius:35px;
+
+	border:5px solid #d88a16;
+
+	box-shadow:
+	0 14px 35px rgba(0,0,0,.20);
+}
+
+.btn-whatsapp-fixo{
+	position:fixed;
+
+	right:20px;
+	bottom:20px;
+
+	width:68px;
+	height:68px;
+
+	border-radius:50%;
+
+	background:#25d366;
+
+	color:#ffffff;
+
+	text-align:center;
+	line-height:68px;
+
+	font-size:32px;
+
+	box-shadow:
+	0 8px 20px rgba(0,0,0,.35);
+
+	z-index:9999;
+}
+
+@media(max-width:900px){
+
+	.topo{
+		height:auto;
+		padding:20px 10px 35px 10px;
+	}
+
+	.telefone-topo{
+		position:relative;
+		top:auto;
+		right:auto;
+		text-align:center;
+		font-size:24px;
+		margin-bottom:10px;
+	}
+
+	.menu{
+		position:relative;
+		bottom:auto;
+	}
+
+	.menu li{
+		display:block;
+		padding-right:0;
+		font-size:24px;
+	}
+
+	.menu li.logo img{
+		width:170px;
+	}
+
+	.banner-conteudo h1{
+		font-size:62px;
+		line-height:60px;
+	}
+
+	.banner-conteudo p{
+		font-size:22px;
+	}
+
+	.botao-principal{
+		font-size:28px;
+		padding:18px 45px;
+	}
+
+	.video-box{
+		padding:28px;
+	}
+
+	.video-box h2{
+		font-size:50px;
+	}
+
+	#contato h2{
+		font-size:60px;
+	}
+
+	#contato p{
+		font-size:23px;
+		line-height:36px;
+	}
+
+	.mapa-titulo{
+		font-size:52px;
+	}
+
+	.mapa-texto{
+		font-size:22px;
+	}
+
+	.mapa{
+		height:360px;
+	}
+
+	.logo-movendo{
+		width:230px;
+	}
+}
+
+</style>
+</head>
+
+<body>
+
+<a class="btn-whatsapp-fixo"
+href="https://wa.me/5513981968816?text=Olá,%20vim%20pelo%20site%20do%20São%20Dubas%20e%20gostaria%20de%20fazer%20um%20pedido!"
+target="_blank">
+
+💬
+
+</a>
+
+<div class="topo">
+
+<div class="telefone-topo">
+📞 (13) 98196-8816
+</div>
+
+<ul class="menu">
+
+<li class="logo">
+<a href="#">
+<img src="img/logo_saodubas.png">
+</a>
+</li>
+
+<li>
+<a href="#video">Vídeo</a>
+</li>
+
+<li>
+<a href="#contato">Contato</a>
+</li>
+
+<li>
+<a href="#localizacao">Localização</a>
+</li>
+
+</ul>
+
+<div class="borda"></div>
+
+</div>
+
+<section class="banner">
+
+<div class="banner-slide slide1"></div>
+<div class="banner-slide slide2"></div>
+<div class="banner-slide slide3"></div>
+<div class="banner-slide slide4"></div>
+<div class="banner-slide slide5"></div>
+<div class="banner-slide slide6"></div>
+
+<div class="banner-overlay"></div>
+
+<div class="banner-conteudo">
+
+<h1>
+São Dubas<br>
+Burger & Shake
+</h1>
+
+<p>
+Hambúrguer artesanal em Santos
+</p>
+
+<a class="botao-principal"
+href="https://pedido.takeat.app/saodubas"
+target="_blank">
+
+Fazer Pedido
+
+</a>
+
+</div>
+
+</section>
+
+<section id="simbolo">
+
+<img class="logo-movendo"
+src="img/logo_saodubas.png">
+
+</section>
+
+<section id="video">
+
+<div class="video-box">
+
+<h2>Vídeo</h2>
+
+<video controls>
+<source src="img/video/dubas.mp4" type="video/mp4">
+Seu navegador não suporta vídeo.
+</video>
+
+</div>
+
+</section>
+
+<section id="contato">
+
+<h2>Contato</h2>
+
+<p>
+R. Dom Duarte Leopoldo e Silva, 40<br>
+Marapé - Santos/SP
+</p>
+
+<p>
+(13) 98196-8816
+</p>
+
+<div class="contato-botoes">
+
+<a class="botao-whatsapp"
+href="https://wa.me/5513981968816?text=Olá,%20vim%20pelo%20site%20do%20São%20Dubas%20e%20gostaria%20de%20fazer%20um%20pedido!"
+target="_blank">
+
+WhatsApp
+
+</a>
+
+<a class="botao-instagram"
+href="https://www.instagram.com/sao.dubas/"
+target="_blank">
+
+Instagram
+
+</a>
+
+<a class="botao-ifood"
+href="https://www.ifood.com.br/delivery/santos-sp/sao-dubas---hamburgueria-artesanal-marape/01ec1490-d561-4baf-9a24-b90d98afe175"
+target="_blank">
+
+iFood
+
+</a>
+
+<a class="botao-cardapio"
+href="https://pedido.takeat.app/saodubas"
+target="_blank">
+
+Pedido Online
+
+</a>
+
+</div>
+
+</section>
+
+<section class="mapa-box" id="localizacao">
+
+<h2 class="mapa-titulo">
+Localização
+</h2>
+
+<p class="mapa-texto">
+R. Dom Duarte Leopoldo e Silva, 40<br>
+Marapé - Santos/SP
+</p>
+
+<a class="botao-maps"
+href="https://maps.google.com/?q=São+Dubas+Burger+Shake+Santos"
+target="_blank">
+
+Abrir no Maps
+
+</a>
+
+<iframe class="mapa"
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3646.1634464011822!2d-46.34763378553245!3d-23.954659782117517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce03424b942183%3A0x2ed83f06558fbaed!2sS%C3%83O+DUBAS+BURGER+%26+SHAKE!5e0!3m2!1spt-BR!2sbr!4v1560361560410!5m2!1spt-BR!2sbr">
+</iframe>
+
+</section>
+
+</body>
+</html>
