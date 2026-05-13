@@ -41,18 +41,18 @@ a{
 
 	background:
 	linear-gradient(
-		90deg,
-		#fff8e8,
-		#f4d28b,
-		#fff1cf
+		135deg,
+		#fffaf2 0%,
+		#f5e2b5 45%,
+		#d9a84f 100%
 	);
 
 	position:relative;
 
-	border-bottom:5px solid #e4a326;
+	border-bottom:5px solid #c7851f;
 
 	box-shadow:
-	0 6px 22px rgba(0,0,0,.12);
+	0 8px 24px rgba(0,0,0,.12);
 
 	display:flex;
 	align-items:center;
@@ -80,7 +80,7 @@ a{
 	width:210px;
 
 	filter:
-	drop-shadow(0 6px 12px rgba(0,0,0,.18));
+	drop-shadow(0 8px 18px rgba(0,0,0,.18));
 }
 
 .topo-botoes{
@@ -96,22 +96,22 @@ a{
 	align-items:center;
 	justify-content:center;
 
-	min-width:135px;
+	width:62px;
+	height:62px;
 
-	padding:14px 24px;
-
-	border-radius:45px;
+	border-radius:50%;
 
 	color:#ffffff;
 
-	font-family:"FestivoLC-Basic",Verdana, Geneva, sans-serif;
+	font-family:Arial, Helvetica, sans-serif;
 
-	font-size:20px;
-
-	text-transform:uppercase;
+	font-size:27px;
+	font-weight:bold;
 
 	box-shadow:
-	0 8px 20px rgba(0,0,0,.18);
+	0 10px 24px rgba(0,0,0,.16);
+
+	border:2px solid rgba(255,255,255,.25);
 
 	transition:.3s;
 }
@@ -122,7 +122,12 @@ a{
 }
 
 .topo-whatsapp{
-	background:#25d366;
+	background:
+	linear-gradient(
+		135deg,
+		#25d366,
+		#1db954
+	);
 }
 
 .topo-instagram{
@@ -135,15 +140,38 @@ a{
 	);
 }
 
+.topo-facebook{
+	background:
+	linear-gradient(
+		135deg,
+		#1877f2,
+		#0b4db3
+	);
+}
+
 .topo-ifood{
-	background:#ea1d2c;
+	background:
+	linear-gradient(
+		135deg,
+		#ff2b45,
+		#d91027
+	);
+}
+
+.topo-keeta{
+	background:
+	linear-gradient(
+		135deg,
+		#00b86b,
+		#008f53
+	);
 }
 
 .topo-pedido{
 	background:
 	linear-gradient(
 		135deg,
-		#6b3b1c,
+		#7a451f,
 		#4d2814
 	);
 }
@@ -165,7 +193,7 @@ a{
 
 	opacity:0;
 
-	animation:slideShow 30s infinite;
+	animation:slideShow 35s infinite;
 }
 
 .slide1{
@@ -175,6 +203,7 @@ a{
 
 .slide2{
 	background-image:url(foto2.jpg);
+	background-position:center 38%;
 	animation-delay:5s;
 }
 
@@ -195,9 +224,11 @@ a{
 
 .slide6{
 	background-image:url(foto6.jpg);
+	background-position:center 36%;
 	animation-delay:25s;
 }
-	.slide7{
+
+.slide7{
 	background-image:url(foto7.jpg);
 	animation-delay:30s;
 }
@@ -292,10 +323,10 @@ a{
 	linear-gradient(
 		135deg,
 		#ffce58,
-		#e49a1d
+		#d99018
 	);
 
-	color:#5a2d12;
+	color:#4d2814;
 
 	font-family:"FestivoLC-Basic",Verdana, Geneva, sans-serif;
 
@@ -321,107 +352,17 @@ a{
 	filter:brightness(1.05);
 }
 
-#simbolo{
-	width:100%;
-
-	padding:85px 20px;
-
-	background:
-	linear-gradient(
-		135deg,
-		#fff4d9,
-		#f2d89a,
-		#f8e8bd
-	);
-
-	text-align:center;
-}
-
-.logo-movendo{
-	width:330px;
-	max-width:90%;
-
-	animation:flutuar 3s ease-in-out infinite;
-
-	filter:
-	drop-shadow(0 12px 25px rgba(0,0,0,.22));
-}
-
-@keyframes flutuar{
-
-	0%{
-		transform:translateY(0px);
-	}
-
-	50%{
-		transform:translateY(-12px);
-	}
-
-	100%{
-		transform:translateY(0px);
-	}
-}
-
-#video{
-	width:100%;
-
-	padding:95px 20px;
-
-	background:
-	linear-gradient(
-		135deg,
-		#fff4d9,
-		#f0d7a1,
-		#e5b45f
-	);
-
-	text-align:center;
-}
-
-.video-box{
-	width:920px;
-	max-width:95%;
-
-	margin:auto;
-
-	background:
-	rgba(255,248,230,.58);
-
-	padding:48px;
-
-	border-radius:35px;
-
-	border:4px solid #d88a16;
-
-	box-shadow:
-	0 16px 40px rgba(0,0,0,.18);
-}
-
-.video-box iframe{
-	width:100%;
-	height:520px;
-
-	border-radius:22px;
-
-	border:4px solid #d88a16;
-
-	background:#000;
-
-	box-shadow:
-	0 12px 30px rgba(0,0,0,.25);
-}
-
 .mapa-box{
 	width:100%;
 
 	background:
 	linear-gradient(
 		180deg,
-		#fff0c7,
-		#efc979
+		#fff6df,
+		#f0d08a
 	);
 
-	padding:85px 20px;
+	padding:45px 20px 55px 20px;
 
 	text-align:center;
 }
@@ -429,13 +370,13 @@ a{
 .mapa-titulo{
 	font-family:"FestivoLC-Basic",Verdana, Geneva, sans-serif;
 
-	font-size:82px;
+	font-size:48px;
 
 	color:#6b3b1c;
 
 	text-transform:uppercase;
 
-	margin-bottom:18px;
+	margin-bottom:10px;
 
 	text-shadow:
 	2px 2px 0 rgba(255,255,255,.45);
@@ -444,13 +385,13 @@ a{
 .mapa-texto{
 	color:#5d2f13;
 
-	font-size:28px;
+	font-size:20px;
 
 	font-weight:bold;
 
-	line-height:42px;
+	line-height:30px;
 
-	margin-bottom:35px;
+	margin-bottom:20px;
 }
 
 .botao-maps{
@@ -460,25 +401,25 @@ a{
 	linear-gradient(
 		135deg,
 		#ffca54,
-		#e39a1c
+		#d99018
 	);
 
-	color:#5a2d12;
+	color:#4d2814;
 
-	padding:20px 45px;
+	padding:14px 28px;
 
-	border-radius:60px;
+	border-radius:45px;
 
 	font-family:"FestivoLC-Basic",Verdana, Geneva, sans-serif;
 
-	font-size:28px;
+	font-size:20px;
 
 	text-transform:uppercase;
 
 	box-shadow:
 	0 10px 25px rgba(0,0,0,.18);
 
-	margin-bottom:42px;
+	margin-bottom:25px;
 
 	transition:.3s;
 }
@@ -491,17 +432,17 @@ a{
 	display:block;
 
 	width:100%;
-	max-width:1120px;
+	max-width:850px;
 
-	height:470px;
+	height:300px;
 
 	margin:0 auto;
 
 	border:none;
 
-	border-radius:35px;
+	border-radius:28px;
 
-	border:5px solid #d88a16;
+	border:4px solid #c7851f;
 
 	box-shadow:
 	0 14px 35px rgba(0,0,0,.20);
@@ -549,9 +490,9 @@ a{
 	}
 
 	.topo-botoes a{
-		min-width:120px;
-		padding:13px 18px;
-		font-size:18px;
+		width:54px;
+		height:54px;
+		font-size:23px;
 	}
 
 	.banner-conteudo h1{
@@ -568,29 +509,19 @@ a{
 		padding:18px 45px;
 	}
 
-	.video-box{
-		padding:28px;
-	}
-
-	.video-box iframe{
-		height:420px;
-	}
-
 	.mapa-titulo{
-		font-size:52px;
+		font-size:38px;
 	}
 
 	.mapa-texto{
-		font-size:22px;
+		font-size:18px;
+		line-height:26px;
 	}
 
 	.mapa{
-		height:360px;
+		height:260px;
 	}
 
-	.logo-movendo{
-		width:230px;
-	}
 }
 
 </style>
@@ -618,33 +549,55 @@ target="_blank">
 
 <a class="topo-whatsapp"
 href="https://wa.me/5513981968816?text=Olá,%20vim%20pelo%20site%20do%20São%20Dubas%20e%20gostaria%20de%20fazer%20um%20pedido!"
-target="_blank">
+target="_blank"
+title="WhatsApp">
 
-WhatsApp
+💬
 
 </a>
 
 <a class="topo-instagram"
 href="https://www.instagram.com/sao.dubas/"
-target="_blank">
+target="_blank"
+title="Instagram">
 
-Instagram
+◎
+
+</a>
+
+<a class="topo-facebook"
+href="https://www.facebook.com/saodubas/"
+target="_blank"
+title="Facebook">
+
+f
 
 </a>
 
 <a class="topo-ifood"
 href="https://www.ifood.com.br/delivery/santos-sp/sao-dubas---hamburgueria-artesanal-marape/01ec1490-d561-4baf-9a24-b90d98afe175"
-target="_blank">
+target="_blank"
+title="iFood">
 
-iFood
+iF
+
+</a>
+
+<a class="topo-keeta"
+href="https://url-eu.mykeeta.com/DeERpzWz"
+target="_blank"
+title="Keeta">
+
+K
 
 </a>
 
 <a class="topo-pedido"
 href="https://pedido.takeat.app/saodubas"
-target="_blank">
+target="_blank"
+title="Pedido Online">
 
-Pedido
+🧾
 
 </a>
 
@@ -662,6 +615,7 @@ Pedido
 <div class="banner-slide slide4"></div>
 <div class="banner-slide slide5"></div>
 <div class="banner-slide slide6"></div>
+<div class="banner-slide slide7"></div>
 
 <div class="banner-overlay"></div>
 
@@ -684,11 +638,6 @@ Fazer Pedido
 
 </a>
 
-
-
-</section>
-
-
 </div>
 
 </section>
@@ -702,5 +651,21 @@ Localização
 <p class="mapa-texto">
 R. Dom Duarte Leopoldo e Silva, 40<br>
 Marapé - Santos/SP
+</p>
 
-</html
+<a class="botao-maps"
+href="https://maps.app.goo.gl/cvE6YJiwH3wQ65Ui7"
+target="_blank">
+
+Abrir no Maps
+
+</a>
+
+<iframe class="mapa"
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3646.1634464011822!2d-46.34763378553245!3d-23.954659782117517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce03424b942183%3A0x2ed83f06558fbaed!2sS%C3%83O+DUBAS+BURGER+%26+SHAKE!5e0!3m2!1spt-BR!2sbr">
+</iframe>
+
+</section>
+
+</body>
+</html>
