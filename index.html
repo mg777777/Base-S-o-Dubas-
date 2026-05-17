@@ -129,12 +129,23 @@ a{
 	display:block;
 }
 
+/* BANNER ARRUMADO */
+
 .banner{
-	width:100%;
+	width:100vw;
 	height:88vh;
 
 	position:relative;
 	overflow:hidden;
+
+	margin:0;
+	padding:0;
+
+	left:50%;
+	right:50%;
+
+	margin-left:-50vw;
+	margin-right:-50vw;
 }
 
 .banner-slide{
@@ -144,9 +155,9 @@ a{
 	width:100%;
 	height:100%;
 
-	background-size:cover;
-	background-position:center center;
-	background-repeat:no-repeat;
+	background-size:cover !important;
+	background-position:center center !important;
+	background-repeat:no-repeat !important;
 
 	opacity:0;
 
@@ -307,265 +318,5 @@ a{
 	filter:brightness(1.05);
 }
 
-.mapa-box{
-	width:100%;
-
-	background:
-	linear-gradient(
-		180deg,
-		#fff6df,
-		#f0d08a
-	);
-
-	padding:45px 20px 55px 20px;
-
-	text-align:center;
-}
-
-.mapa-titulo{
-	font-family:"FestivoLC-Basic",Verdana, Geneva, sans-serif;
-
-	font-size:48px;
-
-	color:#6b3b1c;
-
-	text-transform:uppercase;
-
-	margin-bottom:10px;
-}
-
-.mapa-texto{
-	color:#5d2f13;
-
-	font-size:20px;
-
-	font-weight:bold;
-
-	line-height:30px;
-
-	margin-bottom:20px;
-}
-
-.botao-maps{
-	display:inline-block;
-
-	background:
-	linear-gradient(
-		135deg,
-		#ffca54,
-		#d99018
-	);
-
-	color:#4d2814;
-
-	padding:14px 28px;
-
-	border-radius:45px;
-
-	font-family:"FestivoLC-Basic",Verdana, Geneva, sans-serif;
-
-	font-size:20px;
-
-	text-transform:uppercase;
-
-	box-shadow:
-	0 10px 25px rgba(0,0,0,.18);
-
-	margin-bottom:25px;
-
-	transition:.3s;
-}
-
-.botao-maps:hover{
-	transform:scale(1.05);
-}
-
-.mapa{
-	display:block;
-
-	width:100%;
-	max-width:850px;
-
-	height:300px;
-
-	margin:0 auto;
-
-	border:none;
-
-	border-radius:28px;
-
-	border:4px solid #c7851f;
-
-	box-shadow:
-	0 14px 35px rgba(0,0,0,.20);
-}
-
-.btn-whatsapp-fixo{
-	position:fixed;
-
-	right:20px;
-	bottom:20px;
-
-	width:68px;
-	height:68px;
-
-	border-radius:50%;
-
-	background:#25d366;
-
-	color:#ffffff;
-
-	text-align:center;
-	line-height:68px;
-
-	font-size:32px;
-
-	box-shadow:
-	0 8px 20px rgba(0,0,0,.35);
-
-	z-index:9999;
-}
-
-@media(max-width:900px){
-
-	.logo-topo img{
-		width:210px;
-	}
-
-	.topo-botoes{
-		justify-content:center;
-		gap:14px;
-	}
-
-	.grupo-esquerda,
-	.grupo-centro,
-	.grupo-direita{
-		gap:10px;
-	}
-
-	.topo-botoes a{
-		width:60px;
-		height:60px;
-	}
-
-	.topo-botoes a img{
-		width:30px;
-		height:30px;
-	}
-
-	.banner-conteudo h1{
-		font-size:62px;
-		line-height:60px;
-	}
-
-	.banner-conteudo p{
-		font-size:22px;
-	}
-
-	.botao-principal{
-		font-size:28px;
-		padding:18px 45px;
-	}
-
-	.mapa-titulo{
-		font-size:38px;
-	}
-
-	.mapa-texto{
-		font-size:18px;
-		line-height:26px;
-	}
-
-	.mapa{
-		height:260px;
-	}
-}
-
 </style>
 </head>
-
-<body>
-
-<a class="btn-whatsapp-fixo"
-href="https://wa.me/5513981968816?text=Olá,%20vim%20pelo%20site%20do%20São%20Dubas%20e%20gostaria%20de%20fazer%20um%20pedido!"
-target="_blank">
-
-💬
-
-</a>
-
-<div class="topo">
-
-<div class="logo-topo">
-<a href="#">
-<img src="logo_saodubas.png">
-</a>
-</div>
-
-<div class="topo-botoes">
-
-<div class="grupo-esquerda">
-
-<a href="https://www.instagram.com/sao.dubas/"
-target="_blank"
-title="Instagram">
-
-<img src="instagram.png">
-
-</a>
-
-<a href="https://www.facebook.com/saodubas/"
-target="_blank"
-title="Facebook">
-
-<img src="facebook.png">
-
-</a>
-
-</div>
-
-<div class="grupo-centro">
-
-<a href="https://wa.me/5513981968816?text=Olá,%20vim%20pelo%20site%20do%20São%20Dubas%20e%20gostaria%20de%20fazer%20um%20pedido!"
-target="_blank"
-title="WhatsApp">
-
-<img src="whatsapp.png">
-
-</a>
-
-<a href="https://pedido.takeat.app/saodubas"
-target="_blank"
-title="Pedido Online">
-
-<img src="pedido.png">
-
-</a>
-
-</div>
-
-<div class="grupo-direita">
-
-<a href="https://www.ifood.com.br/delivery/santos-sp/sao-dubas---hamburgueria-artesanal-marape/01ec1490-d561-4baf-9a24-b90d98afe175"
-target="_blank"
-title="iFood">
-
-<img src="ifood.png">
-
-</a>
-
-<a href="https://url-eu.mykeeta.com/DeERpzWz"
-target="_blank"
-title="Keeta">
-
-<img src="keeta.png">
-
-</a>
-
-</div>
-
-</div>
-
-<div class="borda"></div>
-
-</div>
